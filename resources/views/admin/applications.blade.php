@@ -268,12 +268,31 @@
                     <span class="text-nowrap">Since last month</span>
                   </p>
                 </div>
-              </div>
             </div>
-
-          </div>
         </div>
-      </div>
+        <script>
+          $(".alert").alert();
+        </script>
+    </div>
+</div>
+<br/>
+@if(Session::has('success'))
+<div class="alert alert-success" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  <strong> {{ Session::get('success') }}</strong>
+</div>
+@endif
+@if(Session::has('danger'))
+<div class="alert alert-danger" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  <strong> {{ Session::get('danger') }}</strong>
+</div>
+@endif
+</div>
     </div>
     <div class="container-fluid mt--7">
       <!-- Table -->
@@ -353,8 +372,8 @@
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                          <a class="dropdown-item" href="#">Approve</a>
-                          <a class="dropdown-item" href="#">DisApprove</a>
+                          <a class="dropdown-item" href="{{route('admin.applications.approve', $application->id)}}">Approve</a>
+                          <a class="dropdown-item" href="{{route('admin.applications.disprove', $application->id)}}">DisApprove</a>
                         </div>
                       </div>
                     </td>

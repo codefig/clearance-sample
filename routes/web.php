@@ -44,4 +44,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/graduating', 'LoggedAdminController@showGraduatingList')->name('admin.graduants');
     Route::get('/allStudent', 'LoggedAdminController@showAllStudents')->name('admin.allstudent');
     Route::get('/applications', 'LoggedAdminController@showApplications')->name('admin.applications');
+    Route::get('/approve/{id}', 'LoggedAdminController@approveSubmission')->name('admin.applications.approve');
+    Route::get('/disprove/{id}', 'LoggedAdminController@disproveSubmission')->name('admin.applications.disprove');
 });

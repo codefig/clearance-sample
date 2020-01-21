@@ -103,8 +103,30 @@ class LoggedAdminController extends Controller
         return view('admin.applications', compact('applications'));
     }
 
-    public function approveSubmission($id)
+    public function approveSubmission(Request $request, $id)
     {
-        return "Approve submission " . $id;
+        $user =  Submission::find($id)->user;
+        $user->is_approved = 1;
+        $user->save();
+
+        $user_submission = Submission::where('id',$id)->first();
+        $user_submission->is_approved = 1;
+        $user_submission->save();
+        // return (string)($user_submission->user());
+        $request->session()->flash('success', 'Clearance Application approved for '.$user->matric);
+        return redirect()->back();
+    }
+
+    public function disproveSubmission(Request $request, $id){
+        $user =  Submission::find($id)->user;
+        $user->is_approved = 0;
+        $user->save();
+
+        $user_submission = Submission::where('id',$id)->first();
+        $user_submission->is_approved = 0;
+        $user_submission->save();
+        // return (string)($user_submission->user());
+        $request->session()->flash('danger', 'Clearance Application disapproved for '.$user->matric);
+        return redirect()->back();
     }
 }
