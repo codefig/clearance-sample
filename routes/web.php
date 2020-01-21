@@ -29,6 +29,7 @@ Route::group(['prefix' => 'user'], function () {
     Route::get('/apply', 'LoggedUserController@showApply')->name('user.apply');
     Route::post('/apply', 'LoggedUserController@postApply')->name('user.apply.post');
     Route::get('/graduating', 'LoggedUserController@showGraduating')->name('user.graduating');
+    Route::get('/status', 'LoggedUserController@applicationStatus')->name('user.status');
 });
 
 Route::group(['prefix' => 'admin'], function () {

@@ -97,4 +97,9 @@ class LoggedUserController extends Controller
         $request->session()->flash('success', 'Clearance application submitted successfully!');
         return redirect()->back();
     }
+
+    public function applicationStatus(Request $request)
+    {
+        return view('user.status');
+    }
 }
