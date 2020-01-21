@@ -38,9 +38,9 @@
                 class="header-content h-100 d-flex align-items-center justify-content-between"
               >
                 <div class="academy-logo">
-                  <a href="index.html"
-                    ><img src="img/core-img/logo.png" alt=""
-                  /></a>
+                  <a href="index.html">
+                       <img src="{{ URL::to('img/oau.png') }}" alt="..." style="width:50px;height:50px;">
+                </a>
                 </div>
                 <div class="login-content">
                   <a href="{{ route('user.login') }}">Login</a>
@@ -80,16 +80,11 @@
                     <li>
                       <a href="#">Pages</a>
                       <ul class="dropdown">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="course.html">Course</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="elements.html">Elements</a></li>
+                        <li><a href="{{route('admin.login')}}">Admin Login</a></li>
                       </ul>
                     </li>
 
-                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
@@ -125,10 +120,10 @@
               <div class="col-12">
                 <div class="hero-slides-content">
                   <h4 data-animation="fadeInUp" data-delay="100ms">
-                    Transcript Processing made easy.
+                    Clearance Verification and Processing made easy.
                   </h4>
                   <h2 data-animation="fadeInUp" data-delay="400ms">
-                    Welcome to the Obafemi Awolowo University
+                    Welcome to Obafemi Awolowo University Clearance Portal
                   </h2>
                 </div>
               </div>
@@ -146,7 +141,7 @@
               <div class="col-12">
                 <div class="hero-slides-content">
                   <h4 data-animation="fadeInUp" data-delay="100ms">
-                    Request for your Transcript
+                    Get Cleared Online, Upload the required documents.
                   </h4>
                   <h2 data-animation="fadeInUp" data-delay="400ms">
                     Wherever, Whenever <br />
@@ -174,7 +169,7 @@
                     class="single-top-features d-flex align-items-center justify-content-center"
                   >
                     <i class="icon-agenda-1"></i>
-                    <h5>Prepared Valid Documents</h5>
+                    <h5>Prepare your Valid Documents</h5>
                   </div>
                 </div>
                 <!-- Single Top Features -->
@@ -211,7 +206,7 @@
             <div
               class="cta-content d-flex align-items-center justify-content-between flex-wrap"
             >
-              <h3>Do you want to process your Transcript ?, get in touch</h3>
+              <h3>Quickly get your clearance done.</h3>
               <a href="#" class="btn academy-btn">See More</a>
             </div>
           </div>
@@ -229,10 +224,12 @@
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="footer-widget mb-100">
                 <div class="widget-title">
-                  <a href="#"><img src="img/core-img/logo2.png" alt=""/></a>
+                  <a href="#">
+                       <img src="{{ URL::to('img/oau.png') }}" alt="..." style="width:50px;height:50px;">
+                    </a>
                 </div>
                 <p>
-                  The Transcript processing department of Obafemi Awolowo
+                  The Clearance processing department of Obafemi Awolowo
                   University, Ile-Ife.
                 </p>
                 <div class="footer-social-info">
