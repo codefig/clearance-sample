@@ -29,7 +29,6 @@
   <!-- Icons -->
   <link href="{{ URL::to('js/plugins/nucleo/css/nucleo.css') }}" rel="stylesheet" />
   <link href="{{ URL::to('js/plugins/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet" />
-  <!-- CSS Files -->
   <link href="{{ URL::to('css/argon-dashboard.css?v=1.1.0') }}" rel="stylesheet" />
 </head>
 
@@ -41,7 +40,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- Brand -->
-      <a class="navbar-brand pt-0" href="../index.html">
+      <a class="navbar-brand pt-0" href="{{route('admin.dashboard')}}">
 <img src="{{ URL::to('img/oau.png') }}" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
@@ -160,25 +159,8 @@
         <!-- Divider -->
         <hr class="my-3">
         <!-- Heading -->
-        <h6 class="navbar-heading text-muted">Documentation</h6>
+        <h6 class="navbar-heading text-muted">Administrator</h6>
         <!-- Navigation -->
-        <ul class="navbar-nav mb-md-3">
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html">
-              <i class="ni ni-spaceship"></i> Getting started
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html">
-              <i class="ni ni-palette"></i> Foundation
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html">
-              <i class="ni ni-ui-04"></i> Components
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   </nav>
@@ -251,8 +233,8 @@
         <div class="row">
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Hello Administrator</h1>
-            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress youve made with your work and manage your projects or assigned tasks</p>
-            <a href="#!" class="btn btn-info">Edit profile</a>
+            <p class="text-white mt-0 mb-5">This is your dashboard. You can see clearance applications and approve or disapprove applications</p>
+            <a href="{{route('admin.applications')}}" class="btn btn-info">View Applications</a>
           </div>
         </div>
       </div>
