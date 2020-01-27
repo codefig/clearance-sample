@@ -244,69 +244,11 @@
                       <strong>Thanks, Your clearance Verification has been approved, You can now proceed with other steps.</strong>
                     </div>
                         @else
-                              <nav>
-                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Library</a>
-                                <a class="nav-item nav-link" id="nav-hall-tab" data-toggle="tab" href="#nav-hall" role="tab" aria-controls="nav-hall" aria-selected="false">Halls</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">DSA</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Departmental </a>
-                            </div>
-                        </nav>
-                        <form method="POST" action="{{ route('user.apply.post') }}" enctype="multipart/form-data">
-                        <div class="tab-content" id="nav-tabContent">
-
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                <div class="form-group">
-                                    <label>Upload Library Clearance form </label>
-                                    <input class="form-control" type="file" name="lib_file" id="lib_file" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label> Upload Borrowers Card </label>
-                                    <input type="file" name="borrow_file" id="borrow_file" class="form-control" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label> Upload Library Card</label>
-                                    <input type="file" name="libcard_file" id="libcard_file" class="form-control" />
-                                </div>
-                            </div>
-
-                              <div class="tab-pane fade show" id="nav-hall" role="tabpanel" aria-labelledby="nav-hall-tab">
-
-                                <div class="form-group">
-                                    <label> Upload hall Clearance form</label>
-                                    <input type="file" name="hall_file" id="hall_file" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <div class="form-group">
-                                    <label>DSA Fee Transaction Receipt ID </label>
-                                    <input type="text" name="dsa_string" id="dsa_string" class='form-control' />
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                               <div class="form-group">
-                                   <label>Part Adviser Name</label>
-                                   <input type="text" name="adviser_name" class="form-control">
-                               </div>
-
-                                <div class="form-group">
-                                   <label>Part Adviser Email</label>
-                                   <input type="text" name="adviser_email" class="form-control">
-                               </div>
-
-                               <div class="form-group">
-                                   <label>Upload Clearance file for Department</label>
-                                   <input type="file" name="dept_file" class="form-control" id="dept_file" />
-                               </div>
-
-                               <input type="submit" class="btn btn-primary" value="APPLY FOR CLEARANCE" />
-                               <input type="hidden" name="_token" value="{{ Session::token() }}"
-
-                            </div>
+                        <div class="alert alert-success" role="alert">
+                          <h4 class="alert-heading"></h4>
+                          <p>Please apply for Clearance before viewing status.</p>
+                          <p class="mb-0"></p>
                         </div>
-                        </form>
                         @endif
                     </div>
                     <br/>
